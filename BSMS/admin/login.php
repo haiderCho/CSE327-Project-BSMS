@@ -36,19 +36,21 @@
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-                        
+
                         <form role="form" action="login_process.php" method="post">
-                           
-                            
+
+
 
                             <fieldset>
 
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="User Name" name="unm" type="text" autofocus>
+                                    <input class="form-control" placeholder="User Name" name="unm" type="text"
+                                        autofocus>
                                 </div>
 
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="pwd" type="password" value="">
+                                    <input class="form-control" placeholder="Password" name="pwd" type="password"
+                                        value="">
                                 </div>
 
                                 <?php
@@ -61,7 +63,7 @@
                                         unset($_SESSION['error']);
                                     }
                                 ?>
-                        
+
                                 <!-- Change this to a button or input when using this as a form -->
                                 <button type="submit" class="btn btn-lg btn-success btn-block">
                                     Login

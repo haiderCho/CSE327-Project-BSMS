@@ -17,14 +17,14 @@
 		}
 		else
 		{
-			$sql="SELECT * FROM admin WHERE a_unm='$unm' and a_pwd='$pwd'";
+			$sql = "SELECT * FROM admin WHERE a_unm='$unm' and a_pwd='$pwd'";
 			$result = $link->query($sql);
 			$row = $result->fetch_assoc();
 
 			if(!empty($row))
 			{
 				$_SESSION['admin']['unm']=$row['a_unm'];
-				$_SESSION['admin']['status']=true;
+				$_SESSION['admin']['status'] = true;
 
 				header("location:index.php");
 			}

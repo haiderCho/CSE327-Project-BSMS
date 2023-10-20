@@ -1,4 +1,5 @@
 <?php 
+
     session_start();
 
     if(! isset($_SESSION['admin']['status']))
@@ -28,10 +29,9 @@
     <link href="css/sb-admin.css" rel="stylesheet">
 
     <style type="text/css">
-        .error
-        {
-            color: red;
-        }
+    .error {
+        color: red;
+    }
     </style>
 
 </head>
@@ -55,11 +55,11 @@
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li>
-                            <a href="#"><i class="fa fa-user fa-fw"></i> 
+                            <a href="#"><i class="fa fa-user fa-fw"></i>
                                 <?php
                                     echo $_SESSION['admin']['unm'];
                                 ?>
@@ -80,9 +80,10 @@
             <div class="navbar-default navbar-static-side" role="navigation">
                 <div class="sidebar-collapse">
                     <ul class="nav" id="side-menu">
-                        
+
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Category<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Category<span
+                                    class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="category_add.php">Add Category</a>
@@ -109,7 +110,8 @@
                         </li>
 
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Contact<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Contact<span
+                                    class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="contact_view.php">View Contact</a>
