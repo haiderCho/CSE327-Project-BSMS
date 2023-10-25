@@ -52,7 +52,7 @@
 
                                                     echo "<td width='120'><center><img src='../$row[b_img]' width='100' height='100'></center>";
                                                       
-                                                    echo '<td>'.$row['b_avail'].'</td>
+                                                    echo '<td>'.$row['b_avl'].'</td>
                                                           <td align="center">
                                                             <a style="color: red;" href="process_book_del.php?id='.$row['b_id'].'">Remove</a></br>
                                                             <a style="color: green;" href="process_book_update.php?id='.$row['b_id'].'">Update</a>
