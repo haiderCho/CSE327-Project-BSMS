@@ -28,17 +28,67 @@
 ## 🌲 Project tree
 ```bash
 ...
-├── BSMS
-│   ├── admin
-│   │   ├── css
-│   │   │   ├── plugins
-│   │   │   ├── 
-│   │   │   └── 
-│   │   ├── font-awesome
-│   │   ├── fonts
-│   │   ├── includes
-│   │   └── js
-│   ├── images
+├── [BSMS]
+│   ├── [admin]
+│   │   ├── [css]
+│   │   │   └── ...
+│   │   ├── [font-awesome]
+│   │   │   └── ...
+│   │   ├── [fonts]
+│   │   │   └── ...
+│   │   ├── [includes]
+│   │   │   ├── footer.php
+│   │   │   └── header.php
+│   │   ├── [js]
+│   │   │   └── ...
+│   │   ├── book_add.php
+│   │   ├── book_edit.php
+│   │   ├── book_view.php
+│   │   ├── category_add.php
+│   │   ├── category_edit.php
+│   │   ├── category_view.php
+│   │   ├── contact_view.php
+│   │   ├── index.php
+│   │   ├── login.php
+│   │   ├── login_process.php
+│   │   ├── logout.php
+│   │   ├── order_view.php
+│   │   ├── process_book_add.php
+│   │   ├── process_book_del.php
+│   │   ├── process_book_edit.php
+│   │   ├── process_category_add.php
+│   │   ├── process_category_del.php
+│   │   ├── process_category_edit.php
+│   │   ├── process_contact_del.php
+│   │   ├── process_users_del.php
+│   │   └── Users_view.php
+│   ├── [book_img]
+│   │   └── ...
+│   ├── [images]
+│   │   └── ...
+│   ├── [includes]
+│   │   ├── connection.php
+│   │   ├── footer.php
+│   │   └── header.php
+│   ├── addtocart.php
+│   ├── book_detail.php
+│   ├── book_list.php
+│   ├── cart.php
+│   ├── contact.php
+│   ├── contact_process.php
+│   ├── forget_password.php
+│   ├── forget_password_process.php
+│   ├── index copy.php
+│   ├── index.php
+│   ├── login.php
+│   ├── login_process.php
+│   ├── logout.php
+│   ├── order.php
+│   ├── order_process.php
+│   ├── register.php
+│   ├── register_process.php
+│   ├── search.php
+└── └── style.css
 
 ```
 ## ⚡ Run Locally
