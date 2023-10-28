@@ -36,27 +36,26 @@
 
                                 <?php
 
-                                            $book_q = "SELECT * FROM contact";
+                                    $book_q = "SELECT * FROM contact";
 
-                                            $book_res = $link -> query( $book_q);
+                                    $book_res = $link -> query( $book_q);
 
-                                            $count = 1;
+                                    $count = 1;
 
-                                            while($book_row = $book_res -> fetch_assoc())
-                                            {
-                                                echo '<tr class="odd gradeX">
-                                                          <td>'.$count.'</td>
-                                                          <td>'.$book_row['c_fnm'].'</td>
-                                                          <td>'.$book_row['c_mno'].'</td>
-                                                          <td>'.$book_row['c_email'].'</td>
-                                                          <td>'.$book_row['c_msg'].'</td>
-                                                          <td>'.@date("d-M-y",$book_row['c_time']).'</td>
-                                                          <td align="center"><a style="color: red;" href="process_contact_del.php?id='.$book_row['c_id'].'">x</a></td>
-                                                      </tr>';
-                                                $count++;
-                                            }
-
-                                        ?>
+                                    while($book_row = $book_res -> fetch_assoc())
+                                        {
+                                         echo '<tr class="odd gradeX">
+                                                <td>'.$count.'</td>
+                                                <td>'.$book_row['c_fnm'].'</td>
+                                                <td>'.$book_row['c_mno'].'</td>
+                                                <td>'.$book_row['c_email'].'</td>
+                                                <td>'.$book_row['c_msg'].'</td>
+                                                <td>'.@date("d-M-y",$book_row['c_time']).'</td>
+                                                <td align="center"><a style="color: red;" href="process_contact_del.php?id='.$book_row['c_id'].'">x</a></td>
+                                                </tr>';
+                                         $count++;
+                                        }
+                                ?>
 
                             </tbody>
                         </table>

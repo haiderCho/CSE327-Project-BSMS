@@ -48,7 +48,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Bookstore Management System</a>
+                <a class="navbar-brand" href="index.php">Bookstore Management System</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -82,7 +82,7 @@
                     <ul class="nav" id="side-menu">
 
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Category<span
+                            <a href="#"><i class="fa fa-caret-down" aria-hidden="true"></i> Category<span
                                     class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
@@ -97,7 +97,7 @@
 
 
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Book<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-caret-down" aria-hidden="true"></i> Book<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="book_add.php">Add Book</a>
@@ -110,7 +110,18 @@
                         </li>
 
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Contact<span
+                            <a href="#"><i class="fa fa-caret-down" aria-hidden="true"></i> Orders<span
+                                    class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="order_view.php">View Orders</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fa fa-caret-down" aria-hidden="true"></i> Contact<span
                                     class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
@@ -121,7 +132,7 @@
                         </li>
 
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Users<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-caret-down" aria-hidden="true"></i> Users<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="Users_view.php">View Users</a>
