@@ -1,7 +1,10 @@
 <?php
-	session_start();
+    // Start the session to handle session variables
+    session_start();
 
-	session_destroy();
+    // Destroy the session to log out the user
+    session_destroy();
 
-	header("location:index.php");
+    // Redirect to the index.php page after destroying the session
+    header("location: index.php");
 ?>
