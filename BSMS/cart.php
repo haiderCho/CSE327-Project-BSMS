@@ -1,4 +1,5 @@
 <?php
+// Include the website header.
 	include("includes/header.php");
 ?>
 
@@ -7,8 +8,12 @@
 		<h2 class="title"><a href="#">Cart</a></h2>
 			<p class="meta"></p>
 			<div class="entry">
-				
+			
+<!-- Form to update cart quantities and submit for recalculating. -->
+
 			<form action="addtocart.php" method="post">
+
+			<!-- data Table structure for cart -->
 				<table class="cart" cellspacing="0" border="0" width="100%">
 					<tr align="center">
 						<th width="7%">No</th>
@@ -21,17 +26,19 @@
 					</tr>
 
 					<?php
-
+					//total 0 books and 1 for initial counter in loops.
 						$count=1;
 						$total=0;
 
-						if(isset($_SESSION['cart']))
+						if(isset($_SESSION['cart']))	//session for cart craetion exists.
 						{
+							//each item of the cart goes through the loop.
 							foreach($_SESSION['cart'] as $id=>$val)
 							{
+								// Total cart amount = quantity * price.
 								$rate=$val['qty'] * $val['price'];
 								$total=$total+$rate;
-
+								//display item information in a table.
 								echo '<tr>
 										<td>'.$count.'</td>
 										<td>'.$val['nm'].'</td>
@@ -42,13 +49,13 @@
 										<td><a style="color: red;text-decoration:none;" href="addtocart.php?id='.$id.'">X</a></td>
 									</tr>';
 
-								$count++;
+								$count++;//increment for the counter loop.
 							}
 						}
 					?>
 
 					
-
+					<!-- Display the total calculated above -->
 					<tr style="font-weight: bold;">
 						<td colspan="5">Total : </td>
 						<td colspan="2">BDT. <?php echo $total; ?></td>
@@ -72,5 +79,5 @@
 </div><!-- end #content -->
 
 <?php
-	include("includes/footer.php");
+	include("includes/footer.php");//including the website footer.
 ?>
