@@ -1,13 +1,16 @@
 <?php
+    // Start the session to handle session variables
+    session_start();
 
-	session_start();
-	
-	include("../includes/connection.php");
+    // Include the database connection file
+    include("../includes/connection.php");
 
-	$query = "DELETE FROM book WHERE book_id =".$_GET['id'];
+    // Construct a DELETE query to remove the book with the specified ID from the database
+    $query = "DELETE FROM book WHERE book_id =" . $_GET['id'];
 
-	$res = $link -> query($query);
+    // Execute the query
+    $res = $link->query($query);
 
-	header("location:category_view.php");
-
+    // Redirect the user to the category_view.php page after deletion
+    header("location:category_view.php");
 ?>

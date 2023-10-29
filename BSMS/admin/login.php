@@ -1,12 +1,3 @@
-<?php
-    session_start();
-
-    if(isset($_SESSION['admin']['status']))
-    {
-        header("location:index.php");
-    }
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -39,8 +30,6 @@
 
                         <form role="form" action="login_process.php" method="post">
 
-
-
                             <fieldset>
 
                                 <div class="form-group">
@@ -54,11 +43,11 @@
                                 </div>
 
                                 <?php
-                                    if(!empty($_SESSION['error']))
-                                    {
-                                        foreach($_SESSION['error'] as $er)
-                                        {
-                                            echo '<span style="display: block;text-align: center;padding-bottom: 10px;" class="error">'.$er.'</span>';
+                                    // Display error messages if there are any in the session
+                                    session_start();
+                                    if (!empty($_SESSION['error'])) {
+                                        foreach ($_SESSION['error'] as $er) {
+                                            echo '<span style="display: block;text-align: center;padding-bottom: 10px;" class="error">' . $er . '</span>';
                                         }
                                         unset($_SESSION['error']);
                                     }

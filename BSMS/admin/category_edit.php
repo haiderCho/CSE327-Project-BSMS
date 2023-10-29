@@ -1,26 +1,31 @@
 <?php
+    // Include the header file to maintain a consistent layout
     include("includes/header.php");
 
+    // Include the database connection file
     include("../includes/connection.php");
 
-    $id=$_GET['id'];
+    // Get the category ID from the URL
+    $id = $_GET['id'];
 
-    $q="select * from category
-        where cat_id='$id'";
+    // SQL query to fetch category details based on the provided ID
+    $q = "SELECT * FROM category WHERE cat_id='$id'";
         
+    // Execute the query
     $res = $link->query($q);
 
+    // Fetch the category details
     $row = $res->fetch_assoc();
 ?>
 
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
+            <!-- Page title -->
             <h1 class="page-header">Update Category</h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
-    <!-- /.row -->
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
@@ -32,28 +37,30 @@
                         <div class="col-lg-12">
 
                             <?php
-                            
-                                        if(isset($_SESSION['done']))
-                                        {
-                                            echo '<div class="msg msg-ok">
-                                                <p><strong>'.$_SESSION['done'].'</strong></p>
-                                                </div>';
-                                                
-                                            unset($_SESSION['done']);
-                                        }
-                                        else if(!empty($_SESSION['error']) )
-                                        {
-                                            foreach($_SESSION['error']as $er)
-                                            {
-                                                echo '<div class="msg msg-error; error">
-                                                        <p><strong>'.$er.'</strong></p>
-                                                        </div>';
-                                            }
-                                            
-                                            unset($_SESSION['error']);
+                                // Check if there is a success message or error message to display
+                                if(isset($_SESSION['done']))
+                                {
+                                    echo '<div class="msg msg-ok">
+                                            <p><strong>'.$_SESSION['done'].'</strong></p>
+                                            </div>';
                                     
-                                        }
-                                    ?>
+                                    // Unset the session variable after displaying the message
+                                    unset($_SESSION['done']);
+                                }
+                                else if(!empty($_SESSION['error']))
+                                {
+                                    // Loop through each error message and display it
+                                    foreach($_SESSION['error'] as $er)
+                                    {
+                                        echo '<div class="msg msg-error error">
+                                                <p><strong>'.$er.'</strong></p>
+                                                </div>';
+                                    }
+                                    
+                                    // Unset the session variable after displaying the messages
+                                    unset($_SESSION['error']);
+                                }
+                            ?>
 
                             <form role="form" action="process_category_edit.php" method="post">
 
@@ -64,23 +71,25 @@
                                 </div>
 
                                 <?php
-                                            if(isset($_SESSION['error']['cat']))
-                                            {
-                                                echo '<p class="error">'.$_SESSION['error']['cat'].'</p>';
-                                            } 
-                                        ?>
+                                    // Check if there is an error related to category name and display it
+                                    if(isset($_SESSION['error']['cat']))
+                                    {
+                                        echo '<p class="error">'.$_SESSION['error']['cat'].'</p>';
+                                    } 
+                                ?>
 
+                                <!-- Hidden input field to store the category ID -->
                                 <input type="hidden" name="id" value="<?php echo $row['cat_id']; ?>" />
 
+                                <!-- Submit and reset buttons -->
                                 <button type="submit" class="btn btn-default">Update Category</button>
-
                                 <button type="reset" class="btn btn-default">Reset</button>
-
                             </form>
 
                             <?php
-                                        unset($_SESSION['error']);
-                                    ?>
+                                // Unset the session variable after displaying the error message
+                                unset($_SESSION['error']);
+                            ?>
 
                         </div>
                         <!-- /.col-lg-6 (nested) -->
@@ -99,5 +108,6 @@
 <!-- /#page-wrapper -->
 
 <?php
+    // Include the footer file to close the HTML structure
     include("includes/footer.php");
 ?>

@@ -1,13 +1,16 @@
 <?php
-	session_start();
-	
-	include("../includes/connection.php");
+    // Start the session to handle session variables
+    session_start();
 
-	$query="DELETE FROM contact WHERE c_id =".$_GET['id'];
+    // Include the database connection file
+    include("../includes/connection.php");
 
-    $res = $link -> query($query);
+    // Construct a DELETE query to remove the contact with the specified ID from the database
+    $query = "DELETE FROM contact WHERE c_id =" . $_GET['id'];
 
-    $run = $res->fetch_assoc();
+    // Execute the query
+    $res = $link->query($query);
 
-	header("location:contact_view.php");
+    // Redirect the user to the contact_view.php page after deletion
+    header("location: contact_view.php");
 ?>
