@@ -214,6 +214,79 @@ a img {
 	width: 670px;
 }
 
+/* Post */
+
+.post {
+	margin-bottom: 45px;
+}
+
+.post .title {
+	height: 44px;
+	padding-left: 15px;
+}
+
+.post .title a {
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 30px;
+	color: #618C04;
+}
+
+.post .date {
+}
+
+.post .meta {
+	margin-top: -8px;
+	margin-left: 2px;
+	padding: 0px 30px 2px 15px;
+	border-bottom: 1px solid #D4D8CB;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 10px;
+	color: #66665E;
+}
+
+.post .meta span {
+	display: block;
+	margin-top: -10px;
+}
+
+.post .meta a { }
+
+.post .entry {
+	margin-bottom: 10px;
+	padding: 10px 15px 10px 15px;
+}
+
+.post .links {
+	display: block;
+	width: 120px;
+	height: 20px;
+	margin: 0px 0px 0px 0px; 
+	padding: 4px 0px 0px 40px;
+	background: url(images/img03.gif) no-repeat left top;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #666666;
+}
+
+.post .comments {
+	display: block;
+	width: 120px;
+	height: 18px;
+	margin: 0px; 
+	padding: 3px 0px 0px 40px;
+	background: url(images/img07.gif) no-repeat left top;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #961A06;
+}
 
 /* Sidebar */
 
@@ -284,6 +357,62 @@ a img {
 	font-weight: bold;
 }
 
+/* Calendar */
+
+#calendar {
+}
+
+#calendar caption {
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+
+#calendar table {
+	width: 100%;
+	border-collapse: collapse;
+	border-bottom: 1px solid #24130F;
+	border-left: 1px solid #24130F;
+	border-right: 1px solid #24130F;
+}
+
+#calendar thead th {
+	padding: 5px 0;
+	text-align: center;
+	border-top: 1px solid #24130F;
+	border-left: 1px solid #24130F;
+	background: #24130F;
+}
+
+#calendar tbody td {
+	padding: 5px 0;
+	text-align: center;
+	border-top: 1px solid #24130F;
+	border-left: 1px solid #24130F;
+	border-bottom: 1px solid #24130F;
+}
+
+#calendar tfoot td {
+	padding: 5px;
+	border-left: 1px solid #24130F;
+	border-bottom: 1px solid #24130F;
+}
+
+#calendar tfoot #next {
+	border-top: 1px solid #24130F;
+	text-align: right;
+}
+
+#calendar tfoot #prev {
+	border-top: 1px solid #24130F;
+}
+
+#calendar .pad {
+	border-bottom: 1px solid #24130F;
+}
+
+#calendar #today {
+	background: #24130F;
+}
 
 /* Footer */
 
@@ -308,8 +437,15 @@ a img {
 }
 
 #footer a {
-
 }
+
+
+
+
+
+
+
+
 
 .txt{
 	border:1px solid #c8c8c8;
@@ -349,6 +485,172 @@ a img {
 	color: #000;
 }
 
+
+
+
+
+
+
+
+/* book_list design */
+
+.book_box
+{
+	float: left;
+	border-radius: 5px;
+	width: 32%;
+	margin-right: 2%;
+	margin-bottom: 2%;
+	border: 1px solid #c8c8c8;
+	padding: 14px 14px 8px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.book_box:nth-of-type(3n + 3)
+{
+	margin-right: 0;
+}
+
+.book_box img
+{
+	max-width: 100%;
+	max-height: 100px;
+	border-radius: 5px;
+}
+
+.book_box a
+{
+	text-decoration: none;
+}
+
+.book_box h2
+{
+	height: 24px;
+	overflow: hidden;
+	font-family: open sans;
+	font-weight: bold;
+	color: #444;
+}
+
+.book_box p
+{
+	text-align: center;
+	margin-bottom: 0;
+	padding-top: 4px;
+	color: gray;
+}
+
+
+
+
+
+
+
+/* book_detail Design */
+
+.book_img
+{
+	border: 1px solid #c8c8c8;
+	border-radius: 6px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.book_detail
+{
+	font-family: open sans;
+}
+.book_detail h1
+{
+	font-size: 22px;
+	font-weight: bold;
+	border-bottom: 6px;
+	padding-bottom: 6px;
+}
+
+.book_detail .desc{
+	padding-top: 3px;
+}
+
+.book_detail .price{
+	padding-top: 3px;
+	border-top: 1px dashed gray;
+	border-bottom: 1px dashed gray;
+	color: red;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 14px;
+}
+
+.book_detail .cart_btn
+{
+	background: #618c04;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 10px 20px;
+	display: inline-block;
+	border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+/* Cart Design */
+
+.cart
+{
+	font-family: open sans;
+	border-top: 1px solid #c8c8c8;
+	border-left: 1px solid #c8c8c8;
+}
+
+.cart tr td, tr th
+{
+	text-align: center;
+	border-right: 1px solid #c8c8c8;
+	border-bottom: 1px solid #c8c8c8;
+	padding: 6px;
+}
+
+.cart tr th
+{
+	background-color: #f3f3f3;
+	padding: 8px;
+	color: black;
+}
+
+.btn_refresh
+{
+	background: #618C04;
+	color: #fff;
+	font-family: open sans;
+	font-size: 12px;
+	padding: 6px 12px;
+	border: none;
+	border-radius: 4px;
+	outline: 0;
+	cursor: pointer;
+	margin-right: 2px;
+}
+
+.order
+{	
+	height: 24px;
+	overflow: hidden;
+}
+
+
+
+
+
 /* Pagging */
 
 .pagging
@@ -377,4 +679,57 @@ a img {
 	padding: 10px 16px;
 	color: white;
 	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/* Comment Form */
+
+.comment_form
+{
+
+}
+
+.comment_form tr td
+{
+	padding: 10px;
+}
+
+.com_text
+{
+	border: 1px solid #c8c8c8;
+	border-radius: 4px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 6px 10px;
+	font-family: open sans;
+	outline: 0;
+	resize: none;
+}
+
+.com_btn
+{
+	background: #618c04;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 8px 15px;
+	display: inline-block;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.com_btn
+{
+	background: black;
+}
+
+.error
+{
+	color: red;
 }
